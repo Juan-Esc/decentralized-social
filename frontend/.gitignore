@@ -1,0 +1,7 @@
+node_modules
+.vite
+
+/.cache
+/build
+/public/build
+.env

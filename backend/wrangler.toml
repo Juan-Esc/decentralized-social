@@ -1,0 +1,8 @@
+name = "deso"
+pages_build_output_dir = "./dist"
+compatibility_date = "2024-05-12"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "decentralized-so" # Replace with your own to deploy it
+database_id = "c8d8b00a-3e9b-4375-a6e1-bcefb823d90a"     # Replace with your own to deploy it

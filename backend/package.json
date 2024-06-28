@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler deploy src/index.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:apply": "wrangler d1 migrations apply decentralized-so",
+    "db:apply:r": "wrangler d1 migrations apply decentralized-so --remote",
+    "db:reset": "wrangler d1 execute decentralized-so --file reset-db.sql",
+    "db:reset:r": "wrangler d1 execute decentralized-so --file reset-db.sql --remote"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240512.0",
+    "@types/pg": "^8.11.2",
+    "drizzle-kit": "^0.21.2",
+    "esbuild": "^0.20.2",
+    "wrangler": "^3.57.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "deso-protocol": "^2.6.7",
+    "drizzle-orm": "^0.30.10",
+    "ethers": "^6.12.1",
+    "graphql-request": "^7.0.1",
+    "hono": "^4.0.10"
+  }
+}
